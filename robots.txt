@@ -1,9 +1,17 @@
-# Allow all web crawlers
+# Allow all crawlers
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://marioglass.be/sitemap.xml
+Sitemap: https://marioglass.fr/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Crawl-delay for rate limiting
+Crawl-delay: 10
 
 # Important pages to crawl
 Allow: /about
@@ -11,7 +19,4 @@ Allow: /contact
 Allow: /services/
 Allow: /services/windshield-replacement
 Allow: /services/windshield-repair
-Allow: /services/adas-calibration
-
-# Crawl delay for better server performance
-Crawl-delay: 1 
+Allow: /services/adas-calibration 
